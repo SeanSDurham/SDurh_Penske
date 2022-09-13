@@ -1,0 +1,54 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="602" Width="550" Loaded="Window_Loaded">
+
+    <Grid Margin="0,0,-46,0" RenderTransformOrigin="0.754,0.462">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width = "*" />
+
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height = "20" />
+            <RowDefinition Height = "50" />
+            <RowDefinition Height = "50" />
+            <RowDefinition Height = "*" />
+
+        </Grid.RowDefinitions>
+
+        <TextBlock x:Name = "EventName" Text ="" Grid.Column="0" Grid.Row="1" Width="auto" FontSize="30" HorizontalAlignment="Stretch"/>
+        <TextBlock x:Name = "SeshName" Text ="Please Select a File" Grid.Column="0" Grid.Row="2" Width="auto" FontSize="25"/>
+
+        <StackPanel VerticalAlignment="Top" >
+            <Menu Width="auto" Height="20" HorizontalAlignment="Left" >
+                <MenuItem Header="_File">
+                    <MenuItem x:Name="New" Header="_New" HorizontalAlignment="Left" Width="140" Click="btnOpenFiles_Click"/>
+                    <MenuItem x:Name="Close" Header="_Close" HorizontalAlignment="Left" Width="140" Click="btnClose_Click"/>
+                </MenuItem>
+                
+                <!--Hold over for expansion of product-->
+                <!--<MenuItem Header="_Edit">
+                    <MenuItem x:Name="Options1" Header="_Options" HorizontalAlignment="Left" Width="140"/>
+                </MenuItem>
+                <MenuItem Header="_View">
+                    <MenuItem x:Name="Options2" Header="_Options" HorizontalAlignment="Left" Width="140"/>
+                </MenuItem>
+                <MenuItem Header="_Help">
+                    <MenuItem x:Name="About" Header="&amp;About" HorizontalAlignment="Left" Width="140" Click="GiveMessage_Click"/>
+                </MenuItem>-->
+                
+            </Menu>
+        </StackPanel>
+        <DataGrid AutoGenerateColumns="True" Height="410" HorizontalAlignment="Left"  Grid.Column="0" Grid.Row="3" Margin="3,3,3,3" Name="dataGrid1" VerticalAlignment="Top" Width="544" Grid.ColumnSpan="3" Grid.RowSpan="3" GridLinesVisibility="Horizontal" RowBackground="White" AlternatingRowBackground="#FFC8C8C8" >
+            <DataGrid.CellStyle>
+                <Style/>
+            </DataGrid.CellStyle>
+        </DataGrid>
+    </Grid>
+</Window>
+
